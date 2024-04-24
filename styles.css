@@ -1,0 +1,71 @@
+body {
+  margin: 10;
+  padding: 10;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Alteração: Cor de fundo do corpo */
+  color: #333; /* Alteração: Cor do texto principal */
+}
+
+h1 {
+  margin-top: 20px; /* Adição: Espaço superior para o título */
+  text-align: center; /* Alteração: Centralizar o título */
+  color: #555; /* Alteração: Cor do título */
+}
+
+#noteForm {
+  display: none;
+  margin-top: 20px;
+  background-color: #fff; /* Alteração: Cor de fundo do formulário */
+  padding: 20px; /* Adição: Espaçamento interno */
+  border: 1px solid #ddd; /* Adição: Borda */
+  border-radius: 5px; /* Adição: Arredondamento das bordas */
+}
+
+#notesContainer {
+  margin-top: 20px;
+  display: flex; /* Adição: Exibir as notas em linha */
+  flex-wrap: wrap; /* Adição: Permitir que as notas quebrem para a próxima linha */
+  justify-content: space-between; /* Adição: Distribuir as notas igualmente */
+}
+
+.note {
+  width: calc(50% - 10px); /* Adição: Largura das notas, considerando a margem entre elas */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px; /* Alteração: Espaço inferior entre as notas */
+  background-color: #fff; /* Alteração: Cor de fundo do contêiner da nota */
+  border-radius: 5px; /* Adição: Arredondamento das bordas */
+  box-sizing: border-box; /* Adição: Incluir borda e padding na largura total */
+}
+
+.edit, .delete {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+/* Media query para dispositivos com largura máxima de 600px (modelo mobile) */
+@media(max-width: 600px) {
+  #noteForm {
+      margin-top: 10px; /* Alteração: Reduzir o espaço superior */
+      padding: 10px; /* Alteração: Reduzir o espaçamento interno */
+  }
+
+  .note {
+      width: 100%; /* Alteração: As notas ocupam toda a largura da tela */
+      margin-bottom: 10px; /* Alteração: Reduzir o espaço inferior entre as notas */
+  }
+}
+
+button {
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Remover borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Arredondamento das bordas */
+  cursor: pointer; /* Cursor ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
